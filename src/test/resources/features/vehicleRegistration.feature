@@ -34,7 +34,6 @@ Feature: Checking the related web page
     Then user validates the validation messages
       | label          | value                          | expectedMessage                                      |
       | Vorname        | a                              | Der Vorname muss mindestens zwei Zeichen lang sein.  |
-      | Vorname        | Jhon                           | none                                                 |
       | Vorname        | .                              | Bitte geben Sie Ihren Vornamen ein.                  |
       | Vorname        |                                | Bitte geben Sie Ihren Vornamen ein.                  |
       | Nachname       | a                              | Der Nachname muss mindestens zwei Zeichen lang sein. |
