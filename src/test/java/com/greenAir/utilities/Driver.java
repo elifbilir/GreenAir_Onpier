@@ -1,4 +1,4 @@
-package com.GreenAir_Onpier.utilities;
+package com.greenAir.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package com.GreenAir_Onpier.utilities;
+package com.greenAir.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;
