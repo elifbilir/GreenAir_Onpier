@@ -1,4 +1,4 @@
-package com.GreenAir_Onpier.runners;
+package com.greenAir.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",
         },
         features = "src/test/resources/features",
-        glue = "com/greenAir/task/stepDefinitions",
+        glue = "com/greenAir/stepDefinitions/VehicleRegistrationStepDefs.java",
         dryRun = false,
         tags = "@wip"
 )
