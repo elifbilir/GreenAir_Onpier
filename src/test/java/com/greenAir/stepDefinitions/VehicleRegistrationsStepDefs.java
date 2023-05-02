@@ -11,6 +11,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import static com.greenAir.utilities.BrowserUtils.*;
 import static com.greenAir.utilities.Log.log;
@@ -82,5 +83,22 @@ public class VehicleRegistrationsStepDefs {
         }
         log("the validation of form data is done");
     }
+    @Then("user validates the validation messages")
+    public void userValidatesTheValidationMessages(List<Map<String, String>> data) {
+        for (Map<String, String> datum : data) {
+            String label = datum.get("label");
+            String value = datum.get("value") == null ? "" : datum.get("value");
+            String expectedMessage = datum.get("expectedMessage");
+            log(String.format("validating %s field against %s", label, value));
+            formPage.fill(label, value);
+            String actualMessage = formPage.getValidationMessageByFieldName(label);
+            assertEquals(expectedMessage, actualMessage);
+        }
+    }
+
+
+
+
+
 }
 

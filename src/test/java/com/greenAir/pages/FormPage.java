@@ -37,4 +37,16 @@ public class FormPage extends BasePage {
         String xpath = String.format("//*[.='%s']", title);
         click(By.xpath(xpath));
     }
+
+    public String getValidationMessageByFieldName(String fieldName) {
+        By by = By.xpath(String.format("//label[.='%s']/../..//p", fieldName));
+        if (isPresent(by))
+            return getElement(by).getText();
+        else
+            return "none";
+    }
+
+
+
+
 }
